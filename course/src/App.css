@@ -74,4 +74,25 @@
     text-align: right;
     font-size: 2rem;
   }
-  
+  .listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .title.is-3 {
+    margin: 0;
+  }
+
+  .search.field.is-horizontal {
+    margin-top: 15px;
+  }
+
+  .search.field.is-horizontal .label {
+    margin-right: 10px;
+  }
+
+  .search.field.is-horizontal .input {
+    width: 300px;
+  }

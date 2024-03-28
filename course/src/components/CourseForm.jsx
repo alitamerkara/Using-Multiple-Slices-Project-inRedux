@@ -5,6 +5,7 @@ import {
   changeDescription,
   changeCost,
 } from "../store/slice/FormSlice";
+import { addCourse } from "../store/slice/CourseSlice";
 
 const CourseForm = () => {
   const { name, description, cost } = useSelector((state) => {
@@ -15,11 +16,15 @@ const CourseForm = () => {
     };
   });
   const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addCourse({ name, description, cost }));
+  };
 
   return (
     <div className="courseForm panel">
       <h4 className="subtitle is-3">Kurs Ekle</h4>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="field-group">
           <div className="field">
             <label className="label">Ad</label>
